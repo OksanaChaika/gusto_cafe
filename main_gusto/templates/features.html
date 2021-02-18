@@ -2,30 +2,21 @@
 <section id="features" class="text-center">
   <div class="container">
     <div class="section-title">
-      <h2>Our Specials</h2>
+      <h2>Особенное меню</h2>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <h3>Lorem ipsum dolor</h3>
-          <img src="img/specials/1.jpg" class="img-responsive" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <h3>Consectetur adipiscing</h3>
-          <img src="img/specials/2.jpg" class="img-responsive" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="features-item">
-          <h3>Duis sed dapibus</h3>
-          <img src="img/specials/3.jpg" class="img-responsive" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
-        </div>
-      </div>
+        {% for item in special %}
+            <div class="col-xs-12 col-sm-4">
+                <div class="features-item">
+                    <h3>{{ item.title}}</h3>
+                    <img src={{ item.photo}} class="img-responsive" alt="">
+                    <p>{{ item.desc }}.</p>
+                </div>
+            </div>
     </div>
+        {% endfor %}
+
+
   </div>
+
 </section>
