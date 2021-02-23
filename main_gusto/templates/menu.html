@@ -11,7 +11,7 @@
                   <h2 class="menu-section-title">{{ category.title }}</h2>
                   {% for dish in category.dishes %}
                       <div class="menu-item">
-                          <div class="menu-item-name">{{ dish.title}}</div>
+                          <div class="menu-item-name"><a href="/menu/dish/{{ dish.pk }}">{{ dish.title}}</a></div>
                           <div class="menu-item-price">{{dish.price}}</div>
                           <div class="menu-item-description">{{dish.desc}}</div>
                       </div>
@@ -20,8 +20,8 @@
 
                 </div>
               </div>
-            </div>
-        {% endfor %}
 
+        {% endfor %}
+    </div>
     </div>
 </section>
