@@ -1,31 +1,38 @@
 <!-- Contact Section -->
 <section id="contact" class="text-center">
   <div class="container text-center">
-    <div class="col-md-4">
-      <h3>Reservations</h3>
-      <div class="contact-item">
-        <p>Please call</p>
-        <p>(887) 654-3210</p>
+      <div class="col-sm-6">
+      <h3>Бронирование по номеру</h3>
       </div>
-    </div>
-    <div class="col-md-4">
-      <h3>Address</h3>
-      <div class="contact-item">
-        <p>4321 California St,</p>
-        <p>San Francisco, CA 12345</p>
+      <div class="col-offset-2">
+      <h3>Адрес</h3>
       </div>
-    </div>
-    <div class="col-md-4">
-      <h3>Opening Hours</h3>
+          {% for cafe_data in cafe_data %}
+              <div class="contact-item">
+                <div class="col-sm-6">
+                  <p>{{ cafe_data.phone_id }}</p>
+                </div>
+              </div>
+
+              <div class="col-offset-1">
+                <div class="contact-item">
+                 <p>{{ cafe_data.address_id }}</p>
+                </div>
+              </div>
+          {% endfor %}
+
+    <div class="col-md-12">
+      <h3>Мы открыты</h3>
       <div class="contact-item">
-        <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-        <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+          {% for opening_hours in opening_hours %}
+        <p>{{ opening_hours }}</p>
+          {% endfor %}
       </div>
     </div>
   </div>
   <div class="container">
     <div class="section-title text-center">
-      <h3>Send us a message</h3>
+      <h3>Напишите нам</h3>
     </div>
     <div class="col-md-8 col-md-offset-2">
       <form name="sentMessage" id="contactForm" novalidate>
@@ -48,7 +55,7 @@
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+        <button type="submit" class="btn btn-custom btn-lg">Отправить сообщение</button>
       </form>
     </div>
   </div>
