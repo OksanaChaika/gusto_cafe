@@ -21,6 +21,7 @@ from gusto_cafe import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_gusto.urls')),
+    path('admin-panel/', include('admin_gusto.urls')),
 
 ]
 
