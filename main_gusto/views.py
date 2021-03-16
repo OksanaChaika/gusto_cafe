@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import FormMessage
+from admin_gusto.forms import FormMessage
 
 # Create your views here.
 def main_page_view(request):

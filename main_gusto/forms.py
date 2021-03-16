@@ -1,14 +1,15 @@
 from django import forms
-from .models import Message
+from main_gusto.models import Category, Dish
 
-class FormMessage(forms.ModelForm):
-    user_name = forms.CharField(max_length=40,
-                                widget=forms.TextInput(attrs={"type": "text", "id": "name", "class": "form-control", "placeholder": "Имя", "required": "required"}))
-    user_email = forms.EmailField(
-        widget=forms.TextInput(attrs={"type": "email", "id": "email", "class": "form-control", "placeholder": "Email", "required": "required"}))
-    user_message = forms.CharField(max_length=400,
-                                widget=forms.Textarea(attrs={"name": "message", "id": "message", "class": "form-control", "rows": "4", "placeholder": "Сообщение", "required":" required"}))
 
-    class Meta():
-        model = Message
-        fields = ("user_name", "user_email", "user_message")
+class CategoryForm(forms.ModelForm):
+    title = forms.CharField(max_length=15,
+                            widget=forms.TextInput(attrs={'placeholder': "Название", 'required': "required"}))
+    category_order = forms.IntegerField(
+        widget=forms.TextInput(attrs={'placeholder': "Порядок категории в меню", 'required': "required"}))
+    category_photo = forms.ImageField(widget=forms.FileInput())
+    is_visible = forms.BooleanField(initial=True, required=False)
+
+    class Meta:
+        model = Category
+        fields = ('title', 'photo', 'category_order', 'is_visible')

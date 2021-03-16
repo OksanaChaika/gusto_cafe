@@ -44,6 +44,15 @@
             <li><a href="/#contact" class="page-scroll">Contact</a></li>
           </ul>
         </div>
+        {% if user.is_staff %}
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href='{% url "list_of_categories" %}'>Категории</a></li>
+                  <li><a href='{% url "list_of_messages" %}' >Сообщения</a></li>
+              </ul>
+          </div>
+        {% endif %}
+
         <!-- /.navbar-collapse -->
       </div>
     </nav>

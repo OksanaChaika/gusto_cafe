@@ -17,9 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from gusto_cafe import settings
+from account.views import register_view, login_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("register/", register_view, name="register"),
+
+    path("login/", login_view, name="login"),
+    path("logout/", logout_view, name="logout"),
+
     path('', include('main_gusto.urls')),
     path('admin-panel/', include('admin_gusto.urls')),
 
