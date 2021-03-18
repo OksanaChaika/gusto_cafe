@@ -32,7 +32,7 @@ DB_USER = os.environ.get('DB_USER')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [chaika-oksana-gusto.herokuapp.com]
 
 
 # Application definition
