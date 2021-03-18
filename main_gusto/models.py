@@ -76,13 +76,6 @@ class Address(models.Model):
         return f'{self.city}; {self.street}; {self.home}'
 
 
-# class OpeningHours(models.Model):
-#     day = models.CharField(max_length=40)
-#     hours_start = models.CharField(max_length=5)
-#     hours_end = models.CharField(max_length=5)
-#
-#     def __str__(self):
-#         return f'{self.day} - {self.hours_start} - {self.hours_end}'
 
 class CafeInfo(models.Model):
     address_id = models.ForeignKey(Address, on_delete=models.CASCADE)
