@@ -77,7 +77,7 @@ class Address(models.Model):
 
 
 class OpeningHours(models.Model):
-    day = models.CharField(max_length=10)
+    day = models.CharField(max_length=11)
     hours_start = models.CharField(max_length=5)
     hours_end = models.CharField(max_length=5)
 
