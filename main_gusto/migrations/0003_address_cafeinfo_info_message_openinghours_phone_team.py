@@ -42,15 +42,7 @@ class Migration(migrations.Migration):
                 ('is_processed', models.BooleanField(default=False)),
             ],
         ),
-        migrations.CreateModel(
-            name='OpeningHours',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('day', models.CharField(max_length=10)),
-                ('hours_start', models.CharField(max_length=5)),
-                ('hours_end', models.CharField(max_length=5)),
-            ],
-        ),
+
         migrations.CreateModel(
             name='Phone',
             fields=[
