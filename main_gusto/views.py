@@ -26,7 +26,7 @@ def main_page_view(request):
     return render(request, 'index.html', context={
         'categories': categories,
         'special': special,
-        'team_info': team_info,
+        'team_info': team_info[0],
         'info': cafe_info[0],
         'cafe_data': cafe_data,
         'form': form,
