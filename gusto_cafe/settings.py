@@ -34,7 +34,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['chaika-oksana-gusto.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
