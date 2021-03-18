@@ -13,7 +13,7 @@ def main_page_view(request):
 
     cafe_info = Info.objects.all().filter(is_visible=True)
     cafe_data = CafeInfo.objects.all()
-        team_info = Team.objects.all().filter(is_visible=True)
+    team_info = Team.objects.all().filter(is_visible=True)
     categories = Category.objects.filter(is_visible=True).order_by('category_order')
     for item in categories:
         dishes = Dish.objects.filter(category=item.pk).filter(is_visible=True).order_by('dish_order')
